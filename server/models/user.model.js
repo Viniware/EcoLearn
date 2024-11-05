@@ -1,8 +1,15 @@
-const { DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const User = sequelize.define('User', {
-    name: {
+class User extends Model {}
+
+User.init({
+	id: {
+		type: DataTypes.INTEGER,
+		primaryKey: true,
+		autoIncrement: true,
+	},
+	name: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -22,7 +29,11 @@ const User = sequelize.define('User', {
         type: DataTypes.ENUM('client', 'admin'),
         allowNull: false,
         defaultValue: 'client',
-    }
+    },
+}, {
+	sequelize,
+	modelName: 'User',
+	timestamps: false,
 })
 
 module.exports = User;
