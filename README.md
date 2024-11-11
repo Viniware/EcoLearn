@@ -21,14 +21,6 @@ Welcome to EcoLearn, an educational platform designed to enhance environmental a
 - **API Documentation**:
   - Clear and concise documentation for all API endpoints to facilitate integration and development.
 
-## Technologies
-
-- **Node.js** - JavaScript runtime for server-side programming.
-- **Express** - Web framework for building RESTful APIs.
-- **Sequelize** - ORM for interacting with SQLite databases.
-- **SQLite** - Lightweight database management system for efficient data storage.
-- **JWT** - For secure user authentication and session management.
-
 ## Contributing
 
 We welcome contributions! If you're interested in enhancing EcoLearn or fixing issues, please fork the repository and submit a pull request. Ensure you adhere to the project's coding standards and include tests for any new functionality.
