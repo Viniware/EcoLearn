@@ -8,9 +8,9 @@ namespace Server.Services.Article
 {
     public class ArticleService : IArticleService
     {
-        private readonly EcoLearnDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public ArticleService(EcoLearnDbContext context)
+        public ArticleService(ApplicationDbContext context)
         {
             _context = context;
         }

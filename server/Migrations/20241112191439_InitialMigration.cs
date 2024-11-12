@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace server.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -27,6 +27,25 @@ namespace server.Migrations
                 {
                     table.PrimaryKey("PK_Articles", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Text = table.Column<string>(type: "TEXT", nullable: false),
+                    Upvote = table.Column<int>(type: "INTEGER", nullable: false),
+                    Downvote = table.Column<int>(type: "INTEGER", nullable: false),
+                    Date = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Time = table.Column<TimeSpan>(type: "TEXT", nullable: false),
+                    User = table.Column<int>(type: "INTEGER", nullable: false),
+                    Article = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.Id);
+                });
         }
 
         /// <inheritdoc />
@@ -34,6 +53,9 @@ namespace server.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Articles");
+
+            migrationBuilder.DropTable(
+                name: "Comments");
         }
     }
 }

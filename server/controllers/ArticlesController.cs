@@ -17,6 +17,24 @@ namespace Server.Controllers
             _articleService = articleService;
         }
 
+        [HttpPost]
+        public async Task<ActionResult<Article>> CreateArticle([FromBody] Article article)
+        {
+            if (article == null)
+            {
+                return BadRequest("Article data is required.");
+            }
+
+            var createdArticle = await _articleService.CreateArticleAsync(article);
+
+            if (createdArticle == null)
+            {
+                return BadRequest("Unable to create article.");
+            }
+
+            return CreatedAtAction(nameof(GetArticle), new { id = createdArticle.Id }, createdArticle);
+        }
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Article>>> GetArticles()
         {
