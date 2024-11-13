@@ -8,11 +8,11 @@ namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ArticlesController : ControllerBase
+    public class ArticleController : ControllerBase
     {
         private readonly IArticleService _articleService;
 
-        public ArticlesController(IArticleService articleService)
+        public ArticleController(IArticleService articleService)
         {
             _articleService = articleService;
         }

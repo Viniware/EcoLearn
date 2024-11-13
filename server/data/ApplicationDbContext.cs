@@ -9,6 +9,10 @@ namespace Server.Data
 
         public DbSet<Comment> Comments { get; set; }
 
+        public DbSet<Quiz> Quizzes { get; set; }
+
+        public DbSet<Question> Questions { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
