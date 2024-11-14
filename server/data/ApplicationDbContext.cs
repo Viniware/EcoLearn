@@ -13,6 +13,8 @@ namespace Server.Data
 
         public DbSet<Question> Questions { get; set; }
 
+        public DbSet<Choice> Choices { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 

@@ -77,7 +77,7 @@ namespace Server.Controllers
         }
         
         [HttpGet("{quizId}/choices")]
-        public async Task<ActionResult<IEnumerable<Choice>>> GetChoicesForQuiz(int quizId)
+        public async Task<ActionResult<IEnumerable<Models.Choice>>> GetChoicesForQuiz(int quizId)
         {
             var choices = await _quizService.GetChoicesForQuizAsync(quizId);
             return Ok(choices);
