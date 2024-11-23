@@ -1,16 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; 
 import HomePage from './pages/HomePage'; 
 import UserRegistrationPage from './pages/UserRegistrationPage'; 
 import Header from './components/Header'; 
-import Sidebar from './components/Sidebar'; 
 
 const App: React.FC = () => {
+
   return (
     <Router> 
-      <Header />
+      { <Header />}
       <div className="main-content">
-        <Sidebar /> 
         <div className="content">
           <Routes>
             <Route path="/" element={<HomePage />} /> 

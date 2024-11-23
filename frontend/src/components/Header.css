@@ -5,6 +5,8 @@
   padding: 10px 20px;
   background-color: #f8f8f8;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10; /* Garantir que o header fique sobre outros conteúdos */
 }
 
 .header-left .logo {
