@@ -1,26 +1,81 @@
+/* Barra lateral geral */
 .sidebar {
-    width: 80px;
-    background-color: #333;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    height: 100vh;
-  }
-  
-  .learn-button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .learn-button:hover {
-    background-color: #777;
-  }
-  
+  width: 300px; /* Largura da barra lateral */
+  background-color: #fff; /* Fundo branco */
+  border-right: 1px solid #ddd; /* Linha separadora */
+  display: flex;
+  flex-direction: column; /* Itens na vertical */
+  justify-content: flex-start; /* Alinha os itens ao topo */
+  height: calc(100vh + 20px); /* Aumenta a altura total da barra */
+  padding: 0 20px; /* Reduz o espaçamento lateral */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  position: relative; /* Permite deslocamento */
+  top: -20px; /* Move a barra 20px para cima */
+}
+
+/* Navegação */
+.sidebar-nav {
+  flex-grow: 1; /* Ocupa o espaço restante */
+  display: flex;
+  flex-direction: column; /* Itens na vertical */
+  gap: 10px; /* Espaço entre os itens */
+  margin-top: 60px; /* Adiciona mais espaço antes da lista de botões */
+  padding: 0; /* Remove espaçamento interno */
+}
+
+.nav-list {
+  list-style: none; /* Remove os marcadores */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+.nav-button {
+  width: 50%; /* Largura do botão */
+  background-color: #f1f1f1; /* Fundo cinza claro */
+  color: #333; /* Cor do texto */
+  border: 1px solid #ddd; /* Borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 12px; /* Espaçamento interno */
+  text-align: left; /* Alinhamento à esquerda */
+  cursor: pointer;
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 40px; /* Espaço extra à esquerda para mover o botão para a direita */
+}
+
+
+
+.nav-button:hover {
+  background-color: #4CAF50; /* Fundo verde ao passar o mouse */
+  color: #fff; /* Texto branco */
+}
+
+.nav-button.active {
+  background-color: #4CAF50; /* Fundo verde para o botão ativo */
+  color: #fff; /* Texto branco */
+  border-color: #4CAF50; /* Borda verde */
+}
+
+/* Rodapé */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.settings-button {
+  background-color: transparent;
+  color: #666;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.settings-button:hover {
+  color: #333;
+}
