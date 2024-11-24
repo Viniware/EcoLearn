@@ -2853,19 +2853,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mathe\\.nuget\\packages\\": {}
+    "C:\\Users\\Victor001s\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mathe\\Documents\\eco-learn\\server\\server.csproj",
+      "projectUniqueName": "C:\\Users\\Victor001s\\Desktop\\EcoLearn\\server\\server.csproj",
       "projectName": "server",
-      "projectPath": "C:\\Users\\mathe\\Documents\\eco-learn\\server\\server.csproj",
-      "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mathe\\Documents\\eco-learn\\server\\obj\\",
+      "projectPath": "C:\\Users\\Victor001s\\Desktop\\EcoLearn\\server\\server.csproj",
+      "packagesPath": "C:\\Users\\Victor001s\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Victor001s\\Desktop\\EcoLearn\\server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Victor001s\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2936,7 +2936,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
