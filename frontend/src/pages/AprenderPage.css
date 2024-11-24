@@ -1,0 +1,100 @@
+/* Estilos da página de Aprender */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    align-items: center; /* Centraliza os cards horizontalmente */
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 700px; /* Definindo a largura do card */
+    height: 200px; /* Definindo a altura do card */
+  }
+  
+  .card-content {
+    flex: 1;
+  }
+  
+  .card h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 0 0 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Estilos da barra de progresso */
+  .progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre a barra e o texto */
+    width: 329px; /* Largura da barra de progresso */
+    height: 21px; /* Altura da barra de progresso */
+    background-color: #ddd; /* Cor de fundo */
+    border-radius: 10.5px; /* Bordas arredondadas */
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    position: relative;
+    width: 100%; /* Barra de progresso ocupa todo o espaço disponível */
+    height: 100%;
+    background-color: #ddd; /* Cor de fundo da barra */
+    border-radius: 10.5px; /* Bordas arredondadas */
+  }
+  
+  .progress {
+    height: 100%; /* A altura do progresso é a mesma da barra */
+    background-color: #4caf50; /* Cor do progresso */
+    border-radius: 10.5px 0 0 10.5px; /* Borda arredondada apenas à esquerda */
+  }
+  
+  .progress-text {
+    font-size: 14px;
+    color: #333;
+    min-width: 50px; /* Tamanho mínimo para o texto */
+    text-align: right; /* Alinha o número à direita */
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-green {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .btn-green:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-gray {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+  }
+  
+  .card img {
+    width: 212px; /* Largura da imagem */
+    height: 185px; /* Altura da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorções */
+  }
+  

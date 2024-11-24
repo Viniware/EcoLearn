@@ -1,4 +1,3 @@
-// src/components/Sidebar.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';  // Importe o Link
 import './Sidebar.css';
@@ -15,15 +14,16 @@ const Sidebar: React.FC = () => {
       <nav className="sidebar-nav">
         <ul className="nav-list">
           <li className="nav-item">
-            <button
-              className={`nav-button ${activeButton === 'Aprender' ? 'active' : ''}`}
-              onClick={() => handleButtonClick('Aprender')}
-            >
-              <i className="fas fa-book"></i> Aprender
-            </button>
+            <Link to="/aprender"> {/* Link para a página Aprender */}
+              <button
+                className={`nav-button ${activeButton === 'Aprender' ? 'active' : ''}`}
+                onClick={() => handleButtonClick('Aprender')}
+              >
+                <i className="fas fa-book"></i> Aprender
+              </button>
+            </Link>
           </li>
           <li className="nav-item">
-            {/* Link para navegar até a página "Praticar" */}
             <Link to="/praticar">
               <button
                 className={`nav-button ${activeButton === 'Praticar' ? 'active' : ''}`}

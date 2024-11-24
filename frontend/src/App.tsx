@@ -1,10 +1,10 @@
-// src/App.tsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import UserRegistrationPage from './pages/UserRegistrationPage';
 import Header from './components/Header';
 import PracticarPage from './pages/PracticarPage';
+import AprenderPage from './pages/AprenderPage'; // Nova página para "Aprender"
 
 const App: React.FC = () => {
   return (
@@ -16,7 +16,8 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/register" element={<UserRegistrationPage />} />
-              <Route path="/praticar" element={<PracticarPage />} /> {/* Adicione esta rota */}
+              <Route path="/praticar" element={<PracticarPage />} />
+              <Route path="/aprender" element={<AprenderPage />} /> {/* Rota para "Aprender" */}
             </Routes>
           </div>
         </div>
