@@ -34,12 +34,14 @@ const Sidebar: React.FC = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <button
-              className={`nav-button ${activeButton === 'Artigos' ? 'active' : ''}`}
-              onClick={() => handleButtonClick('Artigos')}
-            >
-              <i className="fas fa-file-alt"></i> Artigos
-            </button>
+            <Link to="/artigos"> {/* Link para a página Artigos */}
+              <button
+                className={`nav-button ${activeButton === 'Artigos' ? 'active' : ''}`}
+                onClick={() => handleButtonClick('Artigos')}
+              >
+                <i className="fas fa-file-alt"></i> Artigos
+              </button>
+            </Link>
           </li>
           <li className="nav-item">
             <button

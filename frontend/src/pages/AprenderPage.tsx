@@ -1,6 +1,6 @@
-// src/pages/AprenderPage.tsx
 import React from 'react';
-import './AprenderPage.css'; // Estilos específicos para a página Aprender
+import './AprenderPage.css'; 
+import planeta from './assets/planeta.jpg';
 
 const AprenderPage: React.FC = () => {
   // Dados das seções
@@ -12,7 +12,7 @@ const AprenderPage: React.FC = () => {
       total: 8,
       buttonText: 'Revisar',
       buttonClass: 'btn-green',
-      image: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/212x185',
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const AprenderPage: React.FC = () => {
       total: 12,
       buttonText: 'Continuar',
       buttonClass: 'btn-green',
-      image: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/212x185',
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const AprenderPage: React.FC = () => {
       total: 12,
       buttonText: 'Continuar',
       buttonClass: 'btn-green',
-      image: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/212x185',
     },
     {
       id: 4,
@@ -39,39 +39,86 @@ const AprenderPage: React.FC = () => {
       total: 0,
       buttonText: 'Pular',
       buttonClass: 'btn-gray',
-      image: 'https://via.placeholder.com/80',
+      image: 'https://via.placeholder.com/212x185',
     },
   ];
 
+  // Dados das missões diárias
+  const dailyMissions = [
+    { id: 1, title: 'Faça 4 Exercícios', progress: 3, total: 4 },
+    { id: 2, title: 'Acerte 5 exercícios seguidos', progress: 2, total: 5 },
+  ];
+
   return (
-    <div className="cards-container">
-      {sections.map((section) => {
-        const progressPercentage = (section.progress / section.total) * 100;
-        return (
-          <div className="card" key={section.id}>
-            <div className="card-content">
-              <h3>{section.title}</h3>
-              <p>Ver desafios</p>
-              {/* Barra de progresso com texto ao lado */}
-              <div className="progress-container">
-                <div className="progress-bar">
-                  <div
-                    className="progress"
-                    style={{ width: `${progressPercentage}%` }}
-                  ></div>
+    <div className="aprend-page">
+      {/* Cards de Seções */}
+      <div className="cards-container">
+        {sections.map((section) => {
+          const progressPercentage =
+            section.total > 0 ? (section.progress / section.total) * 100 : 0;
+          return (
+            <div className="card" key={section.id}>
+              <div className="card-content">
+                <h3>{section.title}</h3>
+                <p>Ver desafios</p>
+                {/* Barra de progresso com texto ao lado */}
+                <div className="progress-container">
+                  <div className="progress-bar">
+                    <div
+                      className="progress"
+                      style={{ width: `${progressPercentage}%` }}
+                    ></div>
+                  </div>
+                  <span className="progress-text">
+                    {section.progress}/{section.total}
+                  </span>
                 </div>
-                <span className="progress-text">
-                  {section.progress}/{section.total}
-                </span>
+                <button
+                  className={`btn ${section.buttonClass}`}
+                  style={{ marginTop: '10px' }}
+                >
+                  {section.buttonText}
+                </button>
               </div>
-              <button className={`btn ${section.buttonClass}`} style={{ marginTop: '10px' }}>
-                {section.buttonText}
-              </button>
+              <img
+                src={section.image}
+                alt={`${section.title} imagem`}
+                className="card-image"
+              />
             </div>
-            <img src={section.image} alt={`${section.title} imagem`} />
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
+
+      {/* Sidebar: Imagem do Planeta e Missões Diárias */}
+      <div className="sidebar-container">
+        {/* Imagem do Planeta */}
+        <div className="planet-container">
+          <img
+            src="./assets/planet.png;" 
+            alt="Planeta"
+            className="planet-image"
+          />
+        </div>
+
+        {/* Missões Diárias */}
+        <div className="missions-container">
+          <h2>Missões diárias</h2>
+          {dailyMissions.map((mission) => (
+            <div key={mission.id} className="mission">
+              <p>{mission.title}</p>
+              <div className="mission-progress-bar">
+                <div
+                  className="mission-progress"
+                  style={{
+                    width: `${(mission.progress / mission.total) * 100}%`,
+                  }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
