@@ -6,6 +6,7 @@ import artigo3 from "../assets/artigo1.png";
 import artigo4 from "../assets/artigo2.png";
 import artigo5 from "../assets/artigo3.png";
 import artigo6 from "../assets/artigo4.png";
+import Sidebar from "../components/Sidebar";
 
 // Componente para cada artigo
 const ArtigoCard = ({
@@ -64,6 +65,7 @@ const ArtigosPage = () => {
 
   return (
     <div className="artigos-page">
+      <Sidebar />
       <header className="artigos-page__header">
         <h1>Aprenda Sobre o Meio Ambiente</h1>
         <p>Pequenos passos para um futuro sustentável</p>

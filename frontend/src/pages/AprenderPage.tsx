@@ -1,52 +1,52 @@
-import React from 'react';
-import './AprenderPage.css'; 
-import planeta from './assets/planeta.jpg';
+import React from "react";
+import "./AprenderPage.css";
+import planeta from "./assets/planeta.jpg";
 
 const AprenderPage: React.FC = () => {
   // Dados das seções
   const sections = [
     {
       id: 1,
-      title: 'Seção 1',
+      title: "Seção 1",
       progress: 8,
       total: 8,
-      buttonText: 'Revisar',
-      buttonClass: 'btn-green',
-      image: 'https://via.placeholder.com/212x185',
+      buttonText: "Revisar",
+      buttonClass: "btn-green",
+      image: "https://via.placeholder.com/212x185",
     },
     {
       id: 2,
-      title: 'Seção 2',
+      title: "Seção 2",
       progress: 5,
       total: 12,
-      buttonText: 'Continuar',
-      buttonClass: 'btn-green',
-      image: 'https://via.placeholder.com/212x185',
+      buttonText: "Continuar",
+      buttonClass: "btn-green",
+      image: "https://via.placeholder.com/212x185",
     },
     {
       id: 3,
-      title: 'Seção 3',
+      title: "Seção 3",
       progress: 5,
       total: 12,
-      buttonText: 'Continuar',
-      buttonClass: 'btn-green',
-      image: 'https://via.placeholder.com/212x185',
+      buttonText: "Continuar",
+      buttonClass: "btn-green",
+      image: "https://via.placeholder.com/212x185",
     },
     {
       id: 4,
-      title: 'Seção 4',
+      title: "Seção 4",
       progress: 0,
       total: 0,
-      buttonText: 'Pular',
-      buttonClass: 'btn-gray',
-      image: 'https://via.placeholder.com/212x185',
+      buttonText: "Pular",
+      buttonClass: "btn-gray",
+      image: "https://via.placeholder.com/212x185",
     },
   ];
 
   // Dados das missões diárias
   const dailyMissions = [
-    { id: 1, title: 'Faça 4 Exercícios', progress: 3, total: 4 },
-    { id: 2, title: 'Acerte 5 exercícios seguidos', progress: 2, total: 5 },
+    { id: 1, title: "Faça 4 Exercícios", progress: 3, total: 4 },
+    { id: 2, title: "Acerte 5 exercícios seguidos", progress: 2, total: 5 },
   ];
 
   return (
@@ -75,7 +75,7 @@ const AprenderPage: React.FC = () => {
                 </div>
                 <button
                   className={`btn ${section.buttonClass}`}
-                  style={{ marginTop: '10px' }}
+                  style={{ marginTop: "10px" }}
                 >
                   {section.buttonText}
                 </button>
@@ -95,7 +95,7 @@ const AprenderPage: React.FC = () => {
         {/* Imagem do Planeta */}
         <div className="planet-container">
           <img
-            src="./assets/planet.png;" 
+            src="./assets/planet.png;"
             alt="Planeta"
             className="planet-image"
           />

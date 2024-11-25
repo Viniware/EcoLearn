@@ -1,16 +1,18 @@
 /* Barra lateral geral */
 .sidebar {
-  width: 300px; /* Largura da barra lateral */
+  width: 200px; /* Define a largura fixa da barra lateral */
   background-color: #fff; /* Fundo branco */
   border-right: 1px solid #ddd; /* Linha separadora */
   display: flex;
-  flex-direction: column; /* Itens na vertical */
+  flex-direction: column; /* Alinha itens na vertical */
   justify-content: flex-start; /* Alinha os itens ao topo */
-  height: calc(100vh + 20px); /* Aumenta a altura total da barra */
-  padding: 0 20px; /* Reduz o espaçamento lateral */
+  min-height: 125vh; /* Garante que ocupa toda a altura da janela */
+  height: auto; /* Expande conforme o conteúdo */
+  padding: 0px; /* Reduz o espaçamento lateral */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  position: relative; /* Permite deslocamento */
-  top: -20px; /* Move a barra 20px para cima */
+  position: absolute; /* Permite deslocamento */
+  left: 0; /* Garante que fique totalmente encostada à esquerda */
+  top: 40px; /* Move a barra 20px para cima */
 }
 
 /* Navegação */
@@ -33,7 +35,7 @@
   margin-bottom: 10px; /* Espaçamento entre os itens */
 }
 .nav-button {
-  width: 50%; /* Largura do botão */
+  width: 80%; /* Largura do botão */
   background-color: #f1f1f1; /* Fundo cinza claro */
   color: #333; /* Cor do texto */
   border: 1px solid #ddd; /* Borda */
@@ -43,20 +45,18 @@
   cursor: pointer;
   font-size: 16px; /* Tamanho da fonte */
   transition: background-color 0.3s ease, color 0.3s ease;
-  margin-left: 40px; /* Espaço extra à esquerda para mover o botão para a direita */
+  margin-left: 20px; /* Espaço extra à esquerda para mover o botão para a direita */
 }
 
-
-
 .nav-button:hover {
-  background-color: #4CAF50; /* Fundo verde ao passar o mouse */
+  background-color: #02c38a; /* Fundo verde ao passar o mouse */
   color: #fff; /* Texto branco */
 }
 
 .nav-button.active {
-  background-color: #4CAF50; /* Fundo verde para o botão ativo */
+  background-color: #02c38a; /* Fundo verde para o botão ativo */
   color: #fff; /* Texto branco */
-  border-color: #4CAF50; /* Borda verde */
+  border-color: #02c38a; /* Borda verde */
 }
 
 /* Rodapé */
@@ -69,7 +69,7 @@
   color: #666;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 10px;
   display: flex;
   align-items: center;
   justify-content: center;

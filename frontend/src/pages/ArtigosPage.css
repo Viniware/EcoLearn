@@ -1,19 +1,26 @@
 /* Cabeçalho centralizado acima dos cards */
 .artigos-page__header {
   text-align: center; /* Centraliza o texto */
-  margin-bottom: 40px; /* Espaçamento entre o cabeçalho e os cards */
+  margin-bottom: 0px; /* Espaçamento entre o cabeçalho e os cards */
   background-color: #026761; /* Cor de fundo */
   color: white; /* Cor do texto */
   padding: 10px; /* Espaçamento interno ao redor do texto */
   border-radius: 5px; /* Cantos arredondados (opcional) */
+  box-sizing: border-box; /* Inclui padding e borda dentro da largura total */
+  margin: 0px;
 }
 
 /* Grid para os cartões */
 .artigos-page__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Altere para 2 colunas com tamanhos iguais */
   gap: 20px; /* Espaçamento entre os cartões */
   justify-items: center; /* Centraliza os cards horizontalmente */
+  margin-left: 195px; /* Espaço para a barra lateral (200px) + 20px de margem extra */
+  padding: 20px 10px; /* Espaçamento interno para ajustar os lados */
 }
 
 /* Estilo dos cartões */
