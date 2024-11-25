@@ -1,44 +1,11 @@
-.artigos-page {
-  display: flex;
-  background-color: #f9f9f9;
-  font-family: Arial, sans-serif;
-  height: 100vh; /* Para preencher a altura total da janela */
-}
-
-/* Barra lateral "oculta", mas espaço reservado */
-.artigos-page__sidebar {
-  width: 182px; /* Largura da barra lateral */
-  height: 100%; /* Altura total */
-  background-color: transparent; /* Deixa a barra invisível */
-  pointer-events: none; /* Remove qualquer interação com a barra */
-}
-
-/* Conteúdo principal da página */
-.artigos-page__content {
-  margin-left: 182px; /* Mantém o espaço reservado para a barra */
-  padding: 20px;
-  width: calc(100% - 182px); /* Calcula o espaço restante */
-  display: flex;
-  flex-direction: column; /* Organiza o conteúdo verticalmente */
-  align-items: center; /* Centraliza horizontalmente o conteúdo */
-}
-
 /* Cabeçalho centralizado acima dos cards */
 .artigos-page__header {
   text-align: center; /* Centraliza o texto */
-  margin-bottom: 20px; /* Espaçamento entre o cabeçalho e os cards */
-}
-
-.artigos-page__header h1 {
-  font-size: 24px;
-  color: #333;
-  margin: 0;
-}
-
-.artigos-page__header p {
-  font-size: 16px;
-  color: #666;
-  margin: 5px 0; /* Espaçamento entre as linhas do cabeçalho */
+  margin-bottom: 40px; /* Espaçamento entre o cabeçalho e os cards */
+  background-color: #026761; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 10px; /* Espaçamento interno ao redor do texto */
+  border-radius: 5px; /* Cantos arredondados (opcional) */
 }
 
 /* Grid para os cartões */
@@ -52,10 +19,10 @@
 /* Estilo dos cartões */
 .artigo-card {
   width: 411px; /* Largura fixa do cartão */
-  height: 460px; /* Altura fixa do cartão */
+  height: 360px; /* Altura fixa do cartão */
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column; /* Para alinhar o conteúdo verticalmente */
@@ -86,11 +53,13 @@
 }
 
 .artigo-card__botao {
-  padding: 10px 15px;
-  background-color: #28a745;
+  padding: 15px 60px;
+  background-color: #026761;
   color: white;
   border: none;
-  border-radius: 5px;
+  font-family: sans-serif;
+  font-weight: 700;
+  border-radius: 10px;
   cursor: pointer;
   margin: 0 auto 15px; /* Centraliza o botão */
 }
