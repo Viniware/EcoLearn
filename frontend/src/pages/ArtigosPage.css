@@ -1,29 +1,100 @@
-/* Artigos Page */
 .artigos-page {
-    padding: 20px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .header h1 {
-    font-size: 32px;
-    color: #333;
-  }
-  
-  .header p {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .content {
-    font-size: 16px;
-    color: #333;
-    text-align: center;
-    margin-top: 30px;
-  }
-  
+  display: flex;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Para preencher a altura total da janela */
+}
+
+/* Barra lateral "oculta", mas espaço reservado */
+.artigos-page__sidebar {
+  width: 182px; /* Largura da barra lateral */
+  height: 100%; /* Altura total */
+  background-color: transparent; /* Deixa a barra invisível */
+  pointer-events: none; /* Remove qualquer interação com a barra */
+}
+
+/* Conteúdo principal da página */
+.artigos-page__content {
+  margin-left: 182px; /* Mantém o espaço reservado para a barra */
+  padding: 20px;
+  width: calc(100% - 182px); /* Calcula o espaço restante */
+  display: flex;
+  flex-direction: column; /* Organiza o conteúdo verticalmente */
+  align-items: center; /* Centraliza horizontalmente o conteúdo */
+}
+
+/* Cabeçalho centralizado acima dos cards */
+.artigos-page__header {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaçamento entre o cabeçalho e os cards */
+}
+
+.artigos-page__header h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 0;
+}
+
+.artigos-page__header p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0; /* Espaçamento entre as linhas do cabeçalho */
+}
+
+/* Grid para os cartões */
+.artigos-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+  gap: 20px; /* Espaçamento entre os cartões */
+  justify-items: center; /* Centraliza os cards horizontalmente */
+}
+
+/* Estilo dos cartões */
+.artigo-card {
+  width: 411px; /* Largura fixa do cartão */
+  height: 460px; /* Altura fixa do cartão */
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Para alinhar o conteúdo verticalmente */
+  overflow: hidden; /* Garante que nada extrapole os limites do cartão */
+}
+
+.artigo-card__imagem {
+  width: 411px; /* Largura fixa para imagem */
+  height: 195px; /* Altura fixa para imagem */
+  object-fit: cover; /* Ajusta a imagem sem distorções */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.artigo-card__titulo {
+  font-size: 20px;
+  color: #333;
+  margin: 15px 0 10px;
+  text-align: center;
+}
+
+.artigo-card__descricao {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin: 0 10px 15px;
+  flex-grow: 1; /* Empurra o botão para o final */
+}
+
+.artigo-card__botao {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto 15px; /* Centraliza o botão */
+}
+
+.artigo-card__botao:hover {
+  background-color: #218838;
+}
