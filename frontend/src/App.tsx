@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import PracticarPage from "./pages/PracticarPage";
 import AprenderPage from "./pages/AprenderPage";
 import ArtigosPage from "./pages/ArtigosPage"; // Importando a nova página de artigos
+import Loja from "./pages/Loja";
 
 const App: React.FC = () => {
   return (
@@ -18,8 +19,9 @@ const App: React.FC = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/register" element={<UserRegistrationPage />} />
               <Route path="/praticar" element={<PracticarPage />} />
-              <Route path="/aprender" element={<AprenderPage />} />
+              <Route path="/aprender" element={<HomePage />} />
               <Route path="/artigos" element={<ArtigosPage />} />{" "}
+              <Route path="/Loja" element={<Loja />} />
               {/* Adicionando a rota Artigos */}
             </Routes>
           </div>
