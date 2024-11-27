@@ -88,7 +88,7 @@ const HomePage = () => {
         </div>
 
         {/* Coluna da direita com a imagem e missões diárias */}
-        <div className="sidebar-right">
+        <div className="sidebar-rightt">
           <img className="planet-image" src={planeta} alt="Planeta" />
           <div className="daily-missions">
             <h3>Missões Diárias</h3>

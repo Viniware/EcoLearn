@@ -1,9 +1,8 @@
 .card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 600px;
-  height: 150px;
+  height: 600px;
   margin: 16px auto;
   padding: 16px;
   border-radius: 8px;
@@ -114,7 +113,7 @@
   margin-left: 120px; /* Adicionar espaçamento entre os cartões e o menu */
 }
 
-.sidebar-right {
+.sidebar-rightt {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -123,8 +122,8 @@
 }
 
 .planet-image {
-  width: 466px;
-  height: 489px;
+  width: 366px;
+  height: 409px;
 }
 
 .daily-missions {
