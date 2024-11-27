@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./ArtigosPage.css";
 import artigo1 from "../assets/artigo5.png";
 import artigo2 from "../assets/artigo6.png";
@@ -23,7 +24,10 @@ const ArtigoCard = ({
       <img src={imagem} alt={titulo} className="artigo-card__imagem" />
       <h3 className="artigo-card__titulo">{titulo}</h3>
       <p className="artigo-card__descricao">{descricao}</p>
-      <button className="artigo-card__botao">Conhecer</button>
+      {/* Envolva o botão com o Link */}
+      <Link to="/Artigo">
+        <button className="artigo-card__botao">Conhecer</button>
+      </Link>
     </div>
   );
 };
