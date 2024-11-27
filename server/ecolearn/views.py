@@ -6,6 +6,7 @@ from .serializer import (
     MyUserSerializer, ArticleSerializer, CommentSerializer, 
     QuizSerializer, UserQuizSerializer, QuestionSerializer, ChoiceSerializer
 )
+from datetime import date
 
 class MyUserViewSet(viewsets.ModelViewSet):
     queryset = MyUser.objects.all()
@@ -40,12 +41,24 @@ class CommentViewSet(viewsets.ModelViewSet):
         comment.save()
         return Response({'status': 'downvoted', 'downvote_count': comment.downvote})
 
+    @action(detail=False, methods=['get'])
+    def by_article(self, request):
+        """Get all comments for a specific article."""
+        article_id = request.query_params.get('article_id')
+        if not article_id:
+            return Response({'error': 'article_id parameter is required'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        comments = Comment.objects.filter(article_id=article_id)
+        serializer = self.get_serializer(comments, many=True)
+        return Response(serializer.data)
+
 class QuizViewSet(viewsets.ModelViewSet):
     queryset = Quiz.objects.all()
     serializer_class = QuizSerializer
 
     @action(detail=True, methods=['post'])
     def answer(self, request, pk=None):
+        """Submit answers for a quiz."""
         quiz = self.get_object()
         answers = request.data.get('answers', {})
         correct_choices = Choice.objects.filter(
@@ -63,14 +76,42 @@ class QuizViewSet(viewsets.ModelViewSet):
             'total_points': quiz.total_points,
         })
 
+    @action(detail=True, methods=['get'])
+    def questions(self, request, pk=None):
+        """Get all questions for a specific quiz."""
+        quiz = self.get_object()
+        questions = Question.objects.filter(quiz=quiz)
+        serializer = QuestionSerializer(questions, many=True)
+        return Response(serializer.data)
+
 class UserQuizViewSet(viewsets.ModelViewSet):
     queryset = UserQuiz.objects.all()
     serializer_class = UserQuizSerializer
+
+    @action(detail=True, methods=['get'])
+    def user_results(self, request, pk=None):
+        """Get the quiz results for a specific user."""
+        user_quiz = self.get_object()
+        results = {
+            'user': user_quiz.user.username,
+            'quiz': user_quiz.quiz.name,
+            'completion_date': user_quiz.completion_date,
+        }
+        return Response(results)
 
 class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
 
+    @action(detail=True, methods=['get'])
+    def choices(self, request, pk=None):
+        """Get all choices for a specific question."""
+        question = self.get_object()
+        choices = Choice.objects.filter(question=question)
+        serializer = ChoiceSerializer(choices, many=True)
+        return Response(serializer.data)
+
 class ChoiceViewSet(viewsets.ModelViewSet):
     queryset = Choice.objects.all()
     serializer_class = ChoiceSerializer
+
