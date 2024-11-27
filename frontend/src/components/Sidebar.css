@@ -1,0 +1,81 @@
+/* Barra lateral geral */
+.sidebar {
+  width: 200px; /* Define a largura fixa da barra lateral */
+  background-color: #fff; /* Fundo branco */
+  border-right: 1px solid #ddd; /* Linha separadora */
+  display: flex;
+  flex-direction: column; /* Alinha itens na vertical */
+  justify-content: flex-start; /* Alinha os itens ao topo */
+  min-height: 125vh; /* Garante que ocupa toda a altura da janela */
+  height: auto; /* Expande conforme o conteúdo */
+  padding: 0px; /* Reduz o espaçamento lateral */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  position: absolute; /* Permite deslocamento */
+  left: 0; /* Garante que fique totalmente encostada à esquerda */
+  top: 40px; /* Move a barra 20px para cima */
+}
+
+/* Navegação */
+.sidebar-nav {
+  flex-grow: 1; /* Ocupa o espaço restante */
+  display: flex;
+  flex-direction: column; /* Itens na vertical */
+  gap: 10px; /* Espaço entre os itens */
+  margin-top: 60px; /* Adiciona mais espaço antes da lista de botões */
+  padding: 0; /* Remove espaçamento interno */
+}
+
+.nav-list {
+  list-style: none; /* Remove os marcadores */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+.nav-button {
+  width: 80%; /* Largura do botão */
+  background-color: #f1f1f1; /* Fundo cinza claro */
+  color: #333; /* Cor do texto */
+  border: 1px solid #ddd; /* Borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 12px; /* Espaçamento interno */
+  text-align: left; /* Alinhamento à esquerda */
+  cursor: pointer;
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 20px; /* Espaço extra à esquerda para mover o botão para a direita */
+}
+
+.nav-button:hover {
+  background-color: #02c38a; /* Fundo verde ao passar o mouse */
+  color: #fff; /* Texto branco */
+}
+
+.nav-button.active {
+  background-color: #02c38a; /* Fundo verde para o botão ativo */
+  color: #fff; /* Texto branco */
+  border-color: #02c38a; /* Borda verde */
+}
+
+/* Rodapé */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.settings-button {
+  background-color: transparent;
+  color: #666;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.settings-button:hover {
+  color: #333;
+}
