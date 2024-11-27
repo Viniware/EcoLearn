@@ -1,0 +1,60 @@
+/* Container principal da página */
+.artigo-container {
+  display: flex;
+  background-color: #f9f9f9; /* Fundo claro */
+  height: 100vh; /* Altura total da página */
+}
+
+/* Área de conteúdo ao lado do menu lateral */
+.artigo-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 200px; /* Espaço para o menu lateral */
+}
+
+/* Cabeçalho do artigo */
+.artigo-header {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 0px;
+  background-color: #026761; /* Fundo verde */
+  color: white;
+  padding: 10px; /* Espaçamento interno ao redor do texto */
+  border-radius: 5px; /* Cantos arredondados (opcional) */
+  box-sizing: border-box; /* Inclui padding e borda dentro da largura total */
+  margin: 0px;
+  top: -200px;
+}
+
+.artigo-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.artigo-header p {
+  font-size: 16px;
+  margin: 5px 0 0 0;
+}
+
+/* Estilo do card principal */
+.artigo-cardd {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ajuste a largura total disponível */
+  max-width: 800px; /* Limita a largura máxima */
+  height: auto; /* Permite que a altura cresça automaticamente */
+  min-height: 600px; /* Garante uma altura mínima */
+  margin: 0 auto; /* Centraliza o card na tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Rodapé dentro do card */
+.artigo-footer {
+  margin-top: auto;
+  text-align: right;
+  font-size: 14px;
+  color: #555;
+}
