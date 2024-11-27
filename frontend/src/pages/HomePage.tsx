@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./HomePage.css";
 import Sidebar from "../components/Sidebar";
 import planeta from "../assets/planet.png";
@@ -18,6 +19,7 @@ const Card = ({
   botaoTexto,
   botaoClasse,
   fundoClasse,
+  linkTo,
 }: {
   titulo: string;
   detalhes: string;
@@ -26,6 +28,7 @@ const Card = ({
   botaoTexto: string;
   botaoClasse: string;
   fundoClasse: string;
+  linkTo?: string; // Adiciona suporte para links
 }) => {
   return (
     <div className={`card ${fundoClasse}`}>
@@ -35,7 +38,13 @@ const Card = ({
         <div className="progress-bar">
           <div className="progress-bar-fill" style={{ width: progresso }}></div>
         </div>
-        <button className={`card-button ${botaoClasse}`}>{botaoTexto}</button>
+        {linkTo ? (
+          <Link to={linkTo} className={`card-button ${botaoClasse}`}>
+            {botaoTexto}
+          </Link>
+        ) : (
+          <button className={`card-button ${botaoClasse}`}>{botaoTexto}</button>
+        )}
       </div>
       <img className="card-image" src={imagemSrc} alt={titulo} />
     </div>
@@ -57,6 +66,7 @@ const HomePage = () => {
             botaoTexto="Revisar"
             botaoClasse="white-button"
             fundoClasse="green-background"
+            linkTo="/Praticar"
           />
           <Card
             titulo="Seção 2"
@@ -66,6 +76,7 @@ const HomePage = () => {
             botaoTexto="Continuar"
             botaoClasse="green-button"
             fundoClasse="white-background"
+            linkTo="/sections" // Adiciona o link para a página Sections
           />
           <Card
             titulo="Seção 3"

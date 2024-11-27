@@ -7,6 +7,12 @@
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Move o card para cima */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Adiciona efeito de sombra */
 }
 
 .green-background {
@@ -68,6 +74,7 @@
   cursor: pointer;
   font-family: sans-serif;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .white-button {
