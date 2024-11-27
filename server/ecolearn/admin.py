@@ -1,5 +1,12 @@
 from django.contrib import admin
-from .models import MyUser, Article, Comment, Quiz, UserQuiz, Question, Choice
+from .models import Section, MyUser, Article, Comment, Quiz, UserQuiz, Question, Choice
+
+# Register Section model with custom settings
+@admin.register(Section)
+class SectionAdmin(admin.ModelAdmin):
+    list_display = ('name', 'description')  # Display these fields in the list view
+    search_fields = ('name',)  # Allow search by name
+    ordering = ('name',)  # Default ordering by name
 
 # Register MyUser model with custom settings
 @admin.register(MyUser)
