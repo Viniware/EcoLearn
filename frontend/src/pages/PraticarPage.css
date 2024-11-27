@@ -1,0 +1,125 @@
+/* Layout principal */
+.practicar-containerzz {
+  display: flex;
+}
+
+.main-contentzz {
+  margin-left: 200px;
+  padding: 20px;
+  width: calc(100% - 200px);
+}
+
+/* Card da Seção */
+.section-cardzz {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #026761;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.section-titlezz h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.section-titlezz p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.article-buttonzz {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: inherit;
+}
+
+.article-buttonzz img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Cards dos Níveis */
+.level-containerzz {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.level-cardzz {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+
+.level-cardzz h3 {
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+.tasks-containerzz {
+  display: flex;
+  align-items: center;
+}
+
+.level-imagezz {
+  width: 284px;
+  height: 284px;
+}
+
+.task-pathzz {
+  display: flex;
+  gap: 90px;
+  margin-left: 180px;
+}
+
+/* Estilo das tarefas */
+.taskzz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.taskzz img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.taskzz.completedzz {
+  background-color: #f2ba00;
+}
+
+.taskzz.currentzz {
+  background-color: #f2ba00;
+}
+
+.taskzz.pendingzz {
+  background-color: #f2ba00;
+}
+
+.taskzz img {
+  width: 26px;
+  height: 26px;
+}
+
+.taskzz.completedzz img {
+  width: 34px;
+  height: 34px;
+}
