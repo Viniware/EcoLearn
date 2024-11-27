@@ -1,0 +1,109 @@
+.quizz-contentyy {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 220px;
+}
+
+/* Título */
+.quizz-titleyy {
+  font-size: 2rem;
+  color: #00770a;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #ffffff;
+}
+
+/* Barra de progresso */
+.progress-baryy {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-stepyy {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress-stepyy.activeyy {
+  background-color: #00770a;
+  box-shadow: 0 0 10px 2px #00770a;
+}
+
+/* Card principal */
+.cardyy {
+  background-color: #ffffff;
+  width: 70%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.cardyy h1 {
+  color: #00770a;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.question-textyy {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #333;
+  text-align: left;
+}
+
+/* Pergunta e opções */
+.optionsyy {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.optionsyy label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #f1f1f1;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.optionsyy label:hover {
+  background: #e0f7e0;
+}
+
+.optionsyy input[type="radio"] {
+  accent-color: #00770a;
+}
+
+/* Botão de continuar */
+.continue-buttonyy {
+  margin-top: 20px;
+  background: #00770a;
+  color: #ffffff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.continue-buttonyy:hover {
+  background: #005c08;
+}
+
+/* Estrelas ou ícones decorativos */
